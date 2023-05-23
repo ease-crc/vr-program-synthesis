@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knowrob.org/kb/UR5Robotiq.owl#"
+     xml:base="http://knowrob.org/kb/UR5Robotiq.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SOMA="http://www.ease-crc.org/ont/SOMA.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:urdf="http://knowrob.org/kb/urdf.owl#"
+     xmlns:srdl2="http://knowrob.org/kb/srdl2.owl#"
+     xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:qudt-unit="http://qudt.org/vocab/unit#"
+     xmlns:srdl2-cap="http://knowrob.org/kb/srdl2-cap.owl#"
+     xmlns:UR5Robotiq="http://knowrob.org/kb/UR5Robotiq.owl#"
+     xmlns:srdl2-comp="http://knowrob.org/kb/srdl2-comp.owl#">
+    <owl:Ontology rdf:about="http://knowrob.org/kb/UR5Robotiq.owl">
+        <owl:imports rdf:resource="package://knowrob/owl/URDF.owl"/>
+        <owl:imports rdf:resource="package://knowrob/owl/srdl2.owl"/>
+        <owl:imports rdf:resource="package://knowrob/owl/external/SOMA-OBJ.owl"/>
+        <owl:imports rdf:resource="package://knowrob/owl/external/SOMA.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/srdl2-comp.owl#hasBodyPart -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/srdl2-comp.owl#hasBodyPart"/>
+    
+
+
+    <!-- http://knowrob.org/kb/urdf.owl#hasBaseLink -->
+
+    <owl:ObjectProperty rdf:about="http://knowrob.org/kb/urdf.owl#hasBaseLink"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasComponent"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAbout -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isAbout"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#has_tcp_name -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#has_tcp_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#hasNameString"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://knowrob.org/kb/urdf.owl#hasBaseLinkName -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/urdf.owl#hasBaseLinkName"/>
+    
+
+
+    <!-- http://knowrob.org/kb/urdf.owl#hasEndLinkName -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/urdf.owl#hasEndLinkName"/>
+    
+
+
+    <!-- http://knowrob.org/kb/urdf.owl#hasURDFName -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/urdf.owl#hasURDFName"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#hasDataFormat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/SOMA.owl#hasDataFormat"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#hasNameString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/SOMA.owl#hasNameString"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#hasPersistentIdentifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ease-crc.org/ont/SOMA.owl#hasPersistentIdentifier"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Finger -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Finger">
+        <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#Finger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Gripper -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Gripper">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Gripper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Arm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#ArtificialAgent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/srdl2-comp.owl#hasBodyPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Gripper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://knowrob.org/kb/srdl2-comp.owl#hasBodyPart"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://knowrob.org/kb/knowrob.owl#Finger -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/knowrob.owl#Finger"/>
+    
+
+
+    <!-- http://knowrob.org/kb/srdl2-comp.owl#LaserScanner -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/srdl2-comp.owl#LaserScanner"/>
+    
+
+
+    <!-- http://knowrob.org/kb/srdl2-comp.owl#MaximumSpeed -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/srdl2-comp.owl#MaximumSpeed"/>
+    
+
+
+    <!-- http://knowrob.org/kb/srdl2-comp.owl#StereoCamera -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/srdl2-comp.owl#StereoCamera"/>
+    
+
+
+    <!-- http://knowrob.org/kb/srdl2-comp.owl#WheeledBase -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/srdl2-comp.owl#WheeledBase"/>
+    
+
+
+    <!-- http://knowrob.org/kb/urdf.owl#Link -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/urdf.owl#Link"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Arm -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Arm"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#ArtificialAgent -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#ArtificialAgent"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Gripper -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Gripper"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#KinoDynamicData -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#KinoDynamicData"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalArtifact -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalArtifact"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DigitalResource -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DigitalResource"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#RobotiqFinger_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqFinger_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Finger"/>
+        <urdf:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">right_outer_knuckle</urdf:hasBaseLinkName>
+        <urdf:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">right_inner_finger_pad</urdf:hasEndLinkName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#RobotiqFinger_1 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqFinger_1">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Finger"/>
+        <urdf:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left_outer_knuckle</urdf:hasBaseLinkName>
+        <urdf:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left_inner_finger_pad</urdf:hasEndLinkName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#RobotiqGripper_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqGripper_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#Robotiq2FG85Gripper"/>
+        <dul:hasComponent rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqFinger_0"/>
+        <dul:hasComponent rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqFinger_1"/>
+        <urdf:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robotiq_arg2f_base_link</urdf:hasBaseLinkName>
+        <urdf:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left_inner_finger_pad</urdf:hasEndLinkName>
+        <urdf:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">right_inner_finger_pad</urdf:hasEndLinkName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm"/>
+        <urdf:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">base_link</urdf:hasBaseLinkName>
+        <urdf:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ee_link</urdf:hasEndLinkName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5RobotiqDigitalResource_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5RobotiqDigitalResource_0">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DigitalResource"/>
+        <dul:realizes rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5RobotiqKinoDynamicData_0"/>
+        <SOMA:hasDataFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URDF</SOMA:hasDataFormat>
+        <SOMA:hasPersistentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://vr_program_synthesis/urdf/robots/ur5_robotiq.urdf</SOMA:hasPersistentIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5RobotiqKinoDynamicData_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5RobotiqKinoDynamicData_0">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#KinoDynamicData"/>
+        <dul:isAbout rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqGripper_0"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm_0"/>
+        <urdf:hasBaseLink rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#base_link"/>
+        <has_tcp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tcp</has_tcp_name>
+        <urdf:hasURDFName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5_robotiq</urdf:hasURDFName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqGripper_0"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm_0"/>
+        <urdf:hasBaseLink rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#base_link"/>
+        <has_tcp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tcp</has_tcp_name>
+        <urdf:hasURDFName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5_robotiq_axia80</urdf:hasURDFName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_DigitalResource_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_DigitalResource_0">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DigitalResource"/>
+        <dul:realizes rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_KinoDynamicData_0"/>
+        <SOMA:hasDataFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URDF</SOMA:hasDataFormat>
+        <SOMA:hasPersistentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://vr_program_synthesis/urdf/robots/ur5_robotiq_axia80.urdf</SOMA:hasPersistentIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_KinoDynamicData_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_KinoDynamicData_0">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#KinoDynamicData"/>
+        <dul:isAbout rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#RobotiqGripper_0"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm_0"/>
+        <urdf:hasBaseLink rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#base_link"/>
+        <has_tcp_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tcp</has_tcp_name>
+        <urdf:hasURDFName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5_robotiq_axia80_realsense</urdf:hasURDFName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_DigitalResource_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_DigitalResource_0">
+        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#DigitalResource"/>
+        <dul:realizes rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_KinoDynamicData_0"/>
+        <SOMA:hasDataFormat rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URDF</SOMA:hasDataFormat>
+        <SOMA:hasPersistentIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://vr_program_synthesis/urdf/robots/ur5_robotiq_axia80_realsense.urdf</SOMA:hasPersistentIdentifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_KinoDynamicData_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_KinoDynamicData_0">
+        <rdf:type rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#KinoDynamicData"/>
+        <dul:isAbout rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Robotiq_Axia80_Realsense_0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://knowrob.org/kb/UR5Robotiq.owl#base_link -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/UR5Robotiq.owl#base_link">
+        <rdf:type rdf:resource="http://knowrob.org/kb/urdf.owl#Link"/>
+        <srdl2-comp:hasBodyPart rdf:resource="http://knowrob.org/kb/UR5Robotiq.owl#UR5Arm_0"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

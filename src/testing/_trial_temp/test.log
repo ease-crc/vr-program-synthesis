@@ -1,0 +1,13 @@
+2021-08-26 15:06:51+0200 [-] Log opened.
+2021-08-26 15:06:51+0200 [-] Starting factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021d5d2a58>
+2021-08-26 15:06:51+0200 [-] Starting factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021d581cc0>
+2021-08-26 15:06:56+0200 [-] Starting factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021cd2c5f8>
+2021-08-26 15:07:01+0200 [-] Starting factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021cd2cb70>
+2021-08-26 15:08:05+0200 [AutobahnRosBridgeProtocol,client] <twisted.internet.tcp.Connector instance at 0x7f021cd2ca90 disconnected IPv4Address(type='TCP', host='127.0.0.1', port=9090)> will retry in 2 seconds
+2021-08-26 15:08:05+0200 [-] Stopping factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021cd2cb70>
+2021-08-26 15:08:05+0200 [AutobahnRosBridgeProtocol,client] <twisted.internet.tcp.Connector instance at 0x7f021d5d2b00 disconnected IPv4Address(type='TCP', host='127.0.0.1', port=9090)> will retry in 2 seconds
+2021-08-26 15:08:05+0200 [-] Stopping factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021d5d2a58>
+2021-08-26 15:08:05+0200 [AutobahnRosBridgeProtocol,client] <twisted.internet.tcp.Connector instance at 0x7f021d581d30 disconnected IPv4Address(type='TCP', host='127.0.0.1', port=9090)> will retry in 2 seconds
+2021-08-26 15:08:05+0200 [-] Stopping factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021d581cc0>
+2021-08-26 15:08:05+0200 [AutobahnRosBridgeProtocol,client] <twisted.internet.tcp.Connector instance at 0x7f021cd2c550 disconnected IPv4Address(type='TCP', host='127.0.0.1', port=9090)> will retry in 2 seconds
+2021-08-26 15:08:05+0200 [-] Stopping factory <roslibpy.comm.comm_autobahn.AutobahnRosBridgeClientFactory object at 0x7f021cd2c5f8>

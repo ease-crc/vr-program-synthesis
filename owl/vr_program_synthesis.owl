@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alt/ontologies/2021/5/untitled-ontology-24#"
+     xml:base="http://www.semanticweb.org/alt/ontologies/2021/5/untitled-ontology-24"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SOMA="http://www.ease-crc.org/ont/SOMA.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl">
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-ACT.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#hasGraspPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#hasGraspPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#6DPose"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#hasFinger -->
+
+    <owl:ObjectProperty rdf:about="http://www.ease-crc.org/ont/SOMA.owl#hasFinger">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:domain rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PrehensileEffector"/>
+        <rdfs:range rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Finger"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#Base -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#Base">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelevantPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#ContactRelation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#ContactRelation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#GraspPoint -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#GraspPoint">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelevantPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#GraspRelation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#GraspRelation">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/vr_program_synthesis.owl#SupportRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#GraspedObject -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#GraspedObject">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#ConnectedObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelatumRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#GripperRole -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#GripperRole">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#AgentRole"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LocatumRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#Hole -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#Hole">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelevantPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#Hook -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#Hook">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/vr_program_synthesis.owl#Peg"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#Peg -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#Peg">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#DesignedComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#PickUpSituation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#PickUpSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#PreGraspSituation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#PreGraspSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#PutDownSituation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#PutDownSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#SupportRelation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#SupportRelation">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/vr_program_synthesis.owl#ContactRelation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#SurfaceFeature -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#SurfaceFeature">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelevantPart"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Surface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#Tip -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#Tip">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelevantPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/vr_program_synthesis.owl#TransportingSituation -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/vr_program_synthesis.owl#TransportingSituation">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#AgentRole -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#AgentRole"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#ConnectedObject -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#ConnectedObject"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Finger -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Finger"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#IndexFinger -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#IndexFinger">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Finger"/>
+        <owl:disjointWith rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Thumb"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#PrehensileEffector -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#PrehensileEffector"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#SupportedObject -->
+
+    <rdf:Description rdf:about="http://www.ease-crc.org/ont/SOMA.owl#SupportedObject">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#RelatumRole"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Supporter -->
+
+    <rdf:Description rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Supporter">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LocatumRole"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Thumb -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Thumb">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Finger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#6DPose -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#6DPose"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Situation"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

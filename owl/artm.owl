@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.artiminds.com/kb/artm.owl#"
+     xml:base="http://www.artiminds.com/kb/artm.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:artm="http://www.artiminds.com/kb/artm.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:soma="http://www.ease-crc.org/ont/SOMA.owl#"
+     xmlns:urdf="http://knowrob.org/kb/urdf.owl#"
+     xmlns:iolite="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#"
+     xmlns:motion="http://www.artiminds.com/kb/motion.owl#"
+     xmlns:knowrob="http://knowrob.org/kb/knowrob.owl#">
+    <owl:Ontology rdf:about="http://www.artiminds.com/kb/artm.owl">
+        <owl:imports rdf:resource="http://www.ease-crc.org/ont/SOMA-ACT.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#hasGraspPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.artiminds.com/kb/artm.owl#hasGraspPoint">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#ARTMMotionPrimitive -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#ARTMMotionPrimitive">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#Primitive"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#ARTMTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#ARTMTask">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PhysicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#AssumingArmPoseConstrained -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#AssumingArmPoseConstrained">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#AssumingPose"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#CloseGripperAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#CloseGripperAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#CloseGripperTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#CloseGripperTask">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#SettingGripper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#DepartPose -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#DepartPose">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Destination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#ExtractHoleFromPeg -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#ExtractHoleFromPeg">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Pulling"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#GoalPose -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#GoalPose">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Destination"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#GraspAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#GraspAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#GraspTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#GraspTask">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Grasping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#InsertHoleOntoPeg -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#InsertHoleOntoPeg">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PushingAway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveLinearAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveLinearAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveLinearGoal -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveLinearGoal">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveLinearTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveLinearTask">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EndEffectorPositioning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveToPointAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveToPointAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveToPointTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveToPointTask">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EndEffectorPositioning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveToStateAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveToStateAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#MoveToStateTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#MoveToStateTask">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EndEffectorPositioning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#NoOp -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#NoOp">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PhysicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#OpenGripperAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#OpenGripperAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#OpenGripperTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#OpenGripperTask">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#SettingGripper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#PickAndPlaceTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#PickAndPlaceTask">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#PreGraspTask -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#PreGraspTask">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PhysicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#Primitive -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#Primitive">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#Program -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#Program">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#RelativeMotion -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#RelativeMotion">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PathRole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#RobotAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#RobotAction">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PhysicalAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#SlideAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#SlideAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#Sliding -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#Sliding">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#PhysicalTask"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#SlidingGripper -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#SlidingGripper">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#Sliding"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#EndEffectorPositioning"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#SlidingObject -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#SlidingObject">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#Sliding"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Transporting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#UngraspAction -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#UngraspAction">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#RobotAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#Ungrasping -->
+
+    <owl:Class rdf:about="http://www.artiminds.com/kb/artm.owl#Ungrasping">
+        <rdfs:subClassOf rdf:resource="http://www.artiminds.com/kb/artm.owl#ARTMTask"/>
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#Releasing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#EndEffectorPositioning -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#EndEffectorPositioning"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#GraspState -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#GraspState">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#LinkageState"/>
+        <rdfs:comment>Denotes the State of an object being grasped by another, forming a (temporary) rigid connection between the Gripper and the grasped object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Grasping -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Grasping"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#Location -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#Location"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#PhysicalAction -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#PhysicalAction"/>
+    
+
+
+    <!-- http://www.ease-crc.org/ont/SOMA.owl#SettingGripper -->
+
+    <owl:Class rdf:about="http://www.ease-crc.org/ont/SOMA.owl#SettingGripper"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Plan"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Relation"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

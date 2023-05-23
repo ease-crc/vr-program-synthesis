@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur5_robotiq_axia80_realsense">
+  <xacro:include filename="$(find vr_program_synthesis)/urdf/robots/ur5.urdf" />
+
+  <!-- ROS base_link to UR 'Base' Coordinates transform -->
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <!-- FTS -->
+  <joint name="flange_fts_coupler_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="flange_fts_coupler"/>
+    <origin rpy="0.0 0.0 0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  <link name="flange_fts_coupler">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.021"/>
+      </geometry>
+      <material name="purple">
+        <color rgba="1 0 1 1"/>
+      </material>
+      <origin rpy="0 0 0" xyz="0 0 0.0105"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.021"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.0105"/>
+    </collision>
+  </link>
+
+  <joint name="fts_fixed_joint" type="fixed">
+    <parent link="flange_fts_coupler"/>
+    <child link="fts_link"/>
+    <origin rpy="0.0 0.0 0" xyz="-0.0 0.0 0.021"/>
+  </joint>
+  <link name="fts_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.025"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+      <origin rpy="0 0 0" xyz="0 0 0.0125"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.025"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.0125"/>
+    </collision>
+  </link>
+
+  <joint name="fts_realsense_coupler_joint" type="fixed">
+    <parent link="fts_link"/>
+    <child link="fts_realsense_coupler"/>
+    <origin rpy="0.0 0.0 0" xyz="0.0 0.0 0.025"/>
+  </joint>
+  <link name="fts_realsense_coupler">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.02"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.01"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.02"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.01"/>
+    </collision>
+  </link>
+
+  <!-- Realsense adapter -->
+  <joint name="realsense_adapter_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0 0 0.019"/>
+    <parent link="fts_realsense_coupler"/>
+    <child link="realsense_adapter"/>
+  </joint>
+  <link name="realsense_adapter">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.006"/>
+      </geometry>
+      <material name="green">
+        <color rgba="0 1 0 1"/>
+      </material>
+      <origin rpy="0 0 0" xyz="0 0 0.003"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.006"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.003"/>
+    </collision>
+  </link>
+  <joint name="realsense_robotiq_flattener_joint" type="fixed">
+    <parent link="realsense_adapter"/>
+    <child link="robotiq_coupler_flattener"/>
+    <origin rpy="0 0 0" xyz="0 0 0.01"/>
+  </joint>
+
+  <link name="robotiq_coupler_flattener">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.004"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+      <origin rpy="0 0 0" xyz="0 0 0.002"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.004"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.002"/>
+    </collision>
+  </link>
+
+  <joint name="robotiq_coupler_joint" type="fixed">
+    <parent link="robotiq_coupler_flattener"/>
+    <child link="robotiq_coupler"/>
+    <origin rpy="0 0 0" xyz="0 0 0.004"/>
+  </joint>
+
+  <!-- Realsense -->
+  <joint name="realsense_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="camera_bottom_screw_frame"/>
+    <origin rpy="1.5707963267948966 -1.5707963267948966 0.0" xyz="0.0 -0.04 0.082"/>
+  </joint>
+  <link name="camera_bottom_screw_frame"/>
+  <joint name="camera_link_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.0106 0.0175 0.0125"/>
+    <parent link="camera_bottom_screw_frame"/>
+    <child link="camera_link"/>
+  </joint>
+  <link name="camera_link">
+    <visual>
+      <!-- the mesh origin is at front plate in between the two infrared camera axes -->
+      <origin rpy="1.57079632679 0 1.57079632679" xyz="0.0043 -0.0175 0"/>
+      <geometry>
+        <mesh filename="package://realsense2_description/meshes/d435.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 -0.0175 0"/>
+      <geometry>
+        <box size="0.02505 0.09 0.025"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <!-- The following are not reliable values, and should not be used for modeling -->
+      <mass value="0.072"/>
+      <origin xyz="0 0 0"/>
+      <inertia ixx="0.003881243" ixy="0.0" ixz="0.0" iyy="0.000498940" iyz="0.0" izz="0.003879257"/>
+    </inertial>
+  </link>
+  <!-- Gripper -->
+  <xacro:include filename="$(find vr_program_synthesis)/urdf/robots/robotiq_coupler.urdf"/>
+
+  <xacro:include filename="$(find vr_program_synthesis)/urdf/robots/robotiq_85.urdf"/>
+  <joint name="robotiq_85_base_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="robotiq_arg2f_base_link"/>
+    <origin rpy="0 0 1.5708" xyz="0 0 0.0853"/>
+  </joint>
+
+  <!-- Flange frame ee_link -->
+  <joint name="ee_fixed_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="ee_link"/>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 0"/>
+  </joint>
+  <link name="ee_link">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="default_point_fixed_joint" type="fixed">
+    <parent link="ee_link"/>
+    <child link="default_point_offset"/>
+    <origin rpy="3.14159 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="default_point_offset">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="tool_center_point_origin_manipulator_joint" type="fixed">
+    <parent link="default_point_offset"/>
+    <child link="default_point"/>
+    <origin rpy="0 0 1.5708" xyz="0 0 -0.240"/>
+  </joint>
+
+  <link name="default_point">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="default_point_tcp_joint" type="fixed">
+    <parent link="default_point"/>
+    <child link="tcp"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="tcp">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+</robot>
+

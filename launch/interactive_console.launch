@@ -1,0 +1,11 @@
+<launch>
+    <!-- Configure KnowRob settings -->
+    <arg name="knowrob_settings" default="$(find vr_program_synthesis)/settings/vr_program_synthesis.pl" />
+    <env name="KNOWROB_SETTINGS" value="$(arg knowrob_settings)" />
+
+    <!-- Launch KnowRob -->
+    <include file="$(find rosprolog)/launch/rosprolog.launch">
+        <arg name="initial_package" default="vr_program_synthesis" />
+        <arg name="initial_goal" default="true" />
+    </include>
+</launch>

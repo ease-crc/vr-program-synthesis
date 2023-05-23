@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"f61d455d16fb4cc38b623b5cf2ff0175","collectionName":"wrench","type":"collection"}

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://knowrob.org/kb/KnowRob-Industrial-Objects.owl#"
+     xml:base="http://knowrob.org/kb/KnowRob-Industrial-Objects.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:DUL="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SOMA="http://www.ease-crc.org/ont/SOMA.owl#"
+     xmlns:artm="http://www.artiminds.com/kb/artm.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:urdf="http://knowrob.org/kb/urdf.owl#">
+    <owl:Ontology rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl">
+        <owl:imports rdf:resource="package://vr_program_synthesis/owl/vr_program_synthesis.owl"/>
+        <owl:imports rdf:resource="package://knowrob/owl/URDF.owl"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://knowrob.org/kb/urdf.owl#hasURDFName -->
+
+    <owl:DatatypeProperty rdf:about="http://knowrob.org/kb/urdf.owl#hasURDFName"/>
+
+
+
+    <!-- http://www.artiminds.com/kb/artm.owl#hasGraspPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://www.artiminds.com/kb/artm.owl#hasGraspPoint"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#Motherboard -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#Motherboard">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact"/>
+    </owl:Class>
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#DesignedComponent"/>
+    </owl:Class>
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMStick -->
+
+    <owl:Class rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMStick">
+        <rdfs:subClassOf rdf:resource="http://www.ease-crc.org/ont/SOMA.owl#DesignedComponent"/>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#Motherboard_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#Motherboard_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/vr_program_synthesis_objects.owl#Motherboard"/>
+        <DUL:hasComponent rdf:resource="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket_0"/>
+        <DUL:hasComponent rdf:resource="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket_1"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket_0 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket_0">
+        <rdf:type rdf:resource="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket"/>
+        <urdf:hasURDFName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ddr3-socket001</urdf:hasURDFName>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket_1 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket_1">
+        <rdf:type rdf:resource="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMSocket"/>
+        <urdf:hasURDFName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ddr3-socket001_1</urdf:hasURDFName>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMStick_1 -->
+
+    <owl:NamedIndividual rdf:about="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMStick_1">
+        <rdf:type rdf:resource="http://knowrob.org/kb/vr_program_synthesis_objects.owl#RAMStick"/>
+        <urdf:hasURDFName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ddr3-4Gbyte-ram-module-kingston</urdf:hasURDFName>
+        <artm:hasGraspPoint rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grasp_point</artm:hasGraspPoint>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

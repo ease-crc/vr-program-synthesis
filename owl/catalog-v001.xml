@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Edited Redirect" name="http://www.ease-crc.org/ont/SOMA-OBJ.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/external/SOMA-OBJ.owl"/>
+    <uri id="Imports Wizard Entry" name="http://knowrob.org/kb/knowrob.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/knowrob.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/srdl2-cap.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/srdl2-cap.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/knowrob.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/knowrob.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/srdl2-comp.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/srdl2-comp.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/srdl2.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/srdl2.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/external/SOMA.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/external/SOMA.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/external/SOMA-OBJ.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/external/SOMA-OBJ.owl"/>
+    <uri id="User Entered Import Resolution" name="package://knowrob/owl/URDF.owl" uri="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/external/urdf.owl"/>
+    <group id="Folder Repository, directory=file:/home/lab019/alt/catkin_ws/src/knowrob/owl/external/, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="file:/home/lab019/alt/catkin_ws/src/knowrob/owl/external/">
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://knowrob.org/kb/urdf.owl" uri="urdf.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/DUL.owl" uri="DUL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-ACT.owl" uri="SOMA-ACT.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-ELAN.owl" uri="SOMA-ELAN.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-HOME.owl" uri="SOMA-HOME.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-OBJ.owl" uri="SOMA-OBJ.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-PROC.owl" uri="SOMA-PROC.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-SAY.owl" uri="SOMA-SAY.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-STATE.owl" uri="SOMA-STATE.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ease-crc.org/ont/SOMA-WF.owl" uri="SOMA-WF.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="duplicate:http://www.ease-crc.org/ont/SOMA.owl" uri="SOMA-IO.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="duplicate:http://www.ease-crc.org/ont/SOMA.owl" uri="SOMA-Allen.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="duplicate:http://www.ease-crc.org/ont/SOMA.owl" uri="SOMA.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1662725040923" name="http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl" uri="IOLite.owl"/>
+    </group>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://knowrob.org/kb/IAI-kitchen.owl" uri="motherboard_experiment_lab.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://knowrob.org/kb/KnowRob-Industrial-Objects.owl" uri="vr_program_synthesis_objects.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://knowrob.org/kb/UR5Robotiq.owl" uri="UR5Robotiq.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://knowrob.org/kb/item_hardware.owl" uri="item_hardware.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://www.artiminds.com/kb/artm.owl" uri="artm.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://www.artiminds.com/kb/motherboard.owl" uri="motherboard.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1669373983111" name="http://www.semanticweb.org/alt/ontologies/2021/5/untitled-ontology-24" uri="vr_program_synthesis.owl"/>
+    </group>
+</catalog>

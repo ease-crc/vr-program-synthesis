@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur5_robotiq_axia80">
+  <xacro:include filename="$(find vr_program_synthesis)/urdf/robots/ur5.urdf" />
+
+  <!-- ROS base_link to UR 'Base' Coordinates transform -->
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+  </joint>
+
+  <!-- FTS -->
+  <joint name="fts_fixed_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="fts_link"/>
+    <origin rpy="0.0 0.0 0" xyz="-0.0 0.0 0.021"/>
+  </joint>
+  <link name="fts_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.04" length="0.025"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.04" length="0.025"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+  </link>
+
+  <!-- Robotiq coupler -->
+  <xacro:include filename="$(find vr_program_synthesis)/urdf/robots/robotiq_coupler.urdf"/>
+  <joint name="robotiq_coupler_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
+    <parent link="fts_link"/>
+    <child link="robotiq_coupler"/>
+  </joint>
+
+  <!-- Gripper -->
+  <xacro:include filename="$(find vr_program_synthesis)/urdf/robots/robotiq_85.urdf"/>
+  <joint name="robotiq_85_base_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="robotiq_arg2f_base_link"/>
+    <origin rpy="0 0 1.5708" xyz="0 0 0.062"/>
+  </joint>
+
+  <!-- Flange frame ee_link -->
+  <joint name="ee_fixed_joint" type="fixed">
+    <parent link="tool0"/>
+    <child link="ee_link"/>
+    <origin rpy="0 0 0" xyz="-0.0 0.0 0"/>
+  </joint>
+  <link name="ee_link">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="default_point_fixed_joint" type="fixed">
+    <parent link="ee_link"/>
+    <child link="default_point_offset"/>
+    <origin rpy="3.14159 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="default_point_offset">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="tool_center_point_origin_manipulator_joint" type="fixed">
+    <parent link="default_point_offset"/>
+    <child link="default_point"/>
+    <origin rpy="0 0 1.5708" xyz="0 0 -0.22196"/>
+  </joint>
+
+  <link name="default_point">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+
+  <joint name="default_point_tcp_joint" type="fixed">
+    <parent link="default_point"/>
+    <child link="tcp"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <link name="tcp">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+  </link>
+</robot>
+
