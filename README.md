@@ -2,7 +2,7 @@
 
 Companion repository for the paper "Knowledge-Driven Robot Program Synthesis from Human VR Demonstrations", presented at the 20th International Conference on Principles of Knowledge Representation and Reasoning (KR2023) ([arXiv](TODO)).
 
-The repository contains the source code for our reasoner and our task representation.
+The repository contains the source code for our reasoner and our task representation. The source code for parsing VR demonstrations to Narrative-Enabled Episodic Memories (NEEMs) can be found in [this repository](https://github.com/ease-crc/vr-neem-converter).
 
 ## High-level overview
 
